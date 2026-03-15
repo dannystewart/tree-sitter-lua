@@ -16,11 +16,11 @@ let package = Package(
                 "src/scanner.c",
             ],
             resources: [
-                .copy("queries")
+                .copy("queries"),
             ],
             publicHeadersPath: "bindings/swift",
-            cSettings: [.headerSearchPath("src")]
+            cSettings: [.headerSearchPath("src")],
         ),
     ],
-    cLanguageStandard: .c11
+    cLanguageStandard: .c11,
 )
