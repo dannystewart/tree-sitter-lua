@@ -6,9 +6,6 @@ let package = Package(
     products: [
         .library(name: "TreeSitterLua", targets: ["TreeSitterLua"]),
     ],
-    dependencies: [
-        .package(url: "https://github.com/ChimeHQ/SwiftTreeSitter", from: "0.8.0"),
-    ],
     targets: [
         .target(
             name: "TreeSitterLua",
@@ -24,14 +21,6 @@ let package = Package(
             publicHeadersPath: "bindings/swift",
             cSettings: [.headerSearchPath("src")]
         ),
-        .testTarget(
-            name: "TreeSitterLuaTests",
-            dependencies: [
-                "SwiftTreeSitter",
-                "TreeSitterLua",
-            ],
-            path: "bindings/swift/TreeSitterLuaTests"
-        )
     ],
     cLanguageStandard: .c11
 )
